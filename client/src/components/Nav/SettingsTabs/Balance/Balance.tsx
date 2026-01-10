@@ -29,24 +29,25 @@ function Balance() {
     refillIntervalUnit !== undefined &&
     refillIntervalValue !== undefined;
 
-return (
-  <div>
-    {/* ... other code ... */}
-    
-    {/* Add your button here */}
-    <div className="mt-2">
-      <a 
-        href="https://www.paypal.com/ncp/payment/983FW2ALA6QKE" 
-        target="_blank" 
-        rel="noreferrer"
-        className="block w-full rounded-lg bg-blue-600 px-4 py-3 text-center font-bold text-white transition-colors hover:bg-blue-700 active:bg-blue-800"
-      >
-        ⚡ Top Up 5,000,000 Tokens (₱250)
-      </a>
-      <p className="mt-2 text-center text-xs text-gray-500">
-        Manual top-up: Tokens added within 5-30 mins
-      </p>
-    </div>
+  return (
+    <div className="flex flex-col gap-4 p-4 text-sm text-text-primary">
+      {/* Token credits display */}
+      <TokenCreditsItem tokenCredits={tokenCredits} />
+
+      {/* RYAN'S LAB BUY BUTTON */}
+      <div className="mt-2">
+        <a 
+          href="https://www.paypal.com/ncp/payment/983FW2ALA6QKE" 
+          target="_blank" 
+          rel="noreferrer"
+          className="block w-full rounded-lg bg-blue-600 px-4 py-3 text-center font-bold text-white transition-colors hover:bg-blue-700 active:bg-blue-800"
+        >
+          ⚡ Top Up 5,000,000 Tokens (₱250)
+        </a>
+        <p className="mt-2 text-center text-xs text-gray-500">
+          Manual top-up: Tokens added within 5-30 mins
+        </p>
+      </div>
 
       <hr className="border-border-medium" />
 
@@ -74,3 +75,5 @@ return (
 }
 
 export default React.memo(Balance);
+
+
